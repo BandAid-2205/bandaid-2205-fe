@@ -262,8 +262,48 @@
           null,
           null
         ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/spec/poros/venue_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/app/poros/venue.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          5,
+          5,
+          5,
+          5,
+          5,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1663206041
+    "timestamp": 1663207017
   }
 }
