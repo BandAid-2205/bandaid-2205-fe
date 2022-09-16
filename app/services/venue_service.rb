@@ -1,6 +1,6 @@
 class VenueService
 
-  def self.artist_details(params)
+  def self.venue_details(params)
     response = conn.get("/api/v1/venues/#{params[:id]}")
     status_check(response)
   end
