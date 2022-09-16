@@ -220,6 +220,14 @@
           null
         ]
       },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/config/initializers/omniauth.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1
+        ]
+      },
       "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
@@ -241,13 +249,37 @@
       "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/config/routes.rb": {
         "lines": [
           1,
+          1,
+          1,
           null,
+          1,
+          1,
           null
         ]
       },
       "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/app/helpers/welcome_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/spec/poros/artist_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -302,8 +334,55 @@
           null,
           null
         ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/spec/services/artist_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/app/controllers/users_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/app/models/user.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/justinramirez/turing/3mod/projects/bandaid-2205-fe/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1663207017
+    "timestamp": 1663286810
   }
 }
