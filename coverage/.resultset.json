@@ -309,7 +309,6 @@
           2,
           2,
           2,
-          2,
           null,
           null
         ]
@@ -317,6 +316,10 @@
       "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/models/user.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
           1,
           null
         ]
@@ -437,6 +440,6 @@
         ]
       }
     },
-    "timestamp": 1663458143
+    "timestamp": 1663459123
   }
 }
