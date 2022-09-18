@@ -1,12 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'OAuth Login with Google' do
-  context 'happy path' do
-    before(:each) do
-      OmniAuth.config.test_mode = true
-    end
-    it 'redirects and creates a new user' do
-      OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+RSpec.describe 'Roles Page' do
+  before :each do
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
                                                                            :provider => 'google',
                                                                            :uid => '123545',
                                                                            :info => {
@@ -18,9 +14,13 @@ RSpec.describe 'OAuth Login with Google' do
                                                                            }
                                                                          })
       visit '/auth/google_oauth2'
-
-      expect(current_path).to eq('/roles')
-      expect(User.last.email).to eq('me@me.com')
-    end
+  end
+  it "has a link 'I am an artist' which takes me to artist/registration" do
+    click_on 'I am an artist'
+    expect(current_path).to eq('/artists/register')
+  end
+  it "has a link 'I am a venue/booker' which takes me to venue/registration" do
+    click_on 'I am a venue/booker'
+    expect(current_path).to eq('/venues/register')
   end
 end
