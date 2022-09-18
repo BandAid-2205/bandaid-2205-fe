@@ -35,9 +35,13 @@ Things you may want to cover:
   }
 }
 ```
+## Artist LastFM endpoint (backend)
+```
+get '/api/v1/lastfm/search?query=the%20dirty%20dozen%20brass%20band'
+```
 ## Artist endpoint (backend)
 ```
-get "/api/v1/venues/<user_id>"
+get "/api/v1/artists/<user_id>"
 ```
 
 'get '/api/v1/lastfm/search?query=the%20dirty%20dozen%20brass%20band'
