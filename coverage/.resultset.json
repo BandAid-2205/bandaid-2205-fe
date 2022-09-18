@@ -252,6 +252,7 @@
           1,
           1,
           1,
+          1,
           null,
           1,
           1,
@@ -422,6 +423,15 @@
           null
         ]
       },
+      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/events_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/users_controller.rb": {
         "lines": [
           1,
@@ -440,6 +450,6 @@
         ]
       }
     },
-    "timestamp": 1663459123
+    "timestamp": 1663460417
   }
 }
