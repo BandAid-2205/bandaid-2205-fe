@@ -273,6 +273,37 @@
           null
         ]
       },
+      "/Users/nicole_esquer/turing/3module/projects/bandaid-2205-fe/spec/features/roles/roles_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/nicole_esquer/turing/3module/projects/bandaid-2205-fe/spec/features/users/navbar_spec.rb": {
         "lines": [
           1,
@@ -337,6 +368,44 @@
           null,
           1,
           1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/nicole_esquer/turing/3module/projects/bandaid-2205-fe/spec/features/venues/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
           1,
           null,
           null
@@ -529,6 +598,6 @@
         ]
       }
     },
-    "timestamp": 1663577654
+    "timestamp": 1663589380
   }
 }
