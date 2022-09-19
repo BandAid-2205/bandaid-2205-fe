@@ -1,1 +1,18 @@
-<h1>Venue Registration Page</h1>
+<h1>New Venue Registration</h1>
+<%= link_to "Import Yelp Profile" %>
+
+<%= form_with url: venues_register_path, method: :post, local: true do |f| %>
+   <%= f.label :name, "Name:" %>
+   <%= f.text_field :name %>
+
+   <%= f.label :location, "Location:" %>
+   <%= f.text_field :location %>
+
+   <%= f.label :phone, "Phone:" %>
+   <%= f.telephone_field :phone %>
+
+   <%= f.label :category, "Category:" %>
+   <%= f.text_field :category %>
+
+   <%= f.submit %>
+<% end %>
