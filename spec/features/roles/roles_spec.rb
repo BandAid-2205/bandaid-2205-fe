@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Roles Page' do
   before :each do
+    OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
                                                                            :provider => 'google',
                                                                            :uid => '123545',

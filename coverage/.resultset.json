@@ -273,6 +273,57 @@
           null
         ]
       },
+      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/spec/features/roles/roles_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/spec/features/users/navbar_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/spec/features/users/oauth_login_spec.rb": {
         "lines": [
           1,
@@ -299,36 +350,6 @@
           1,
           1,
           null,
-          null,
-          null
-        ]
-      },
-      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/spec/features/users/roles_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          2,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
           null,
           null
         ]
@@ -441,10 +462,13 @@
           null
         ]
       },
-      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/welcome_controller.rb": {
+      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/artists_controller.rb": {
         "lines": [
           1,
           1,
+          null,
+          1,
+          null,
           null,
           null
         ]
@@ -452,15 +476,6 @@
       "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/application_controller.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/events_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
           null
         ]
       },
@@ -497,17 +512,6 @@
           null
         ]
       },
-      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/artists_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/venues_controller.rb": {
         "lines": [
           1,
@@ -518,8 +522,25 @@
           null,
           null
         ]
+      },
+      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/controllers/events_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1663536636
+    "timestamp": 1663543291
   }
 }
