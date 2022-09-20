@@ -4,6 +4,7 @@ class Artist
   def initialize(data)
     @name = data[:name]
     @location = data[:location]
+    @phone = data[:phone]
     @genre = data[:genre]
     @bio = data[:bio]
     @image_path = data[:image_path]

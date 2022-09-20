@@ -4,21 +4,18 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @imported = {
-      name: '',
-      location: '',
-      genre: '',
-      bio: ''
-    }
+    data= { name: '', location: '', genre: '', bio: '' }
+    @imported = Artist.new(data)
   end
 
   def import
-    @imported = {
-      name: 'bob',
-      location: '1234',
-      genre: 'good',
-      bio: 'asdfg'
-    }
-    render action: :new
+    if params[:name] == nil
+      flash[:error] = "Name cannot be blank"
+      redirect_to '/artists/register'
+    else
+      # binding.pry
+      @imported = ArtistFacade.artist_import(params[:name])
+      render action: :new
+    end
   end
 end
