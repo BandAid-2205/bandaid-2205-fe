@@ -396,6 +396,9 @@
           null,
           1,
           1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -406,8 +409,11 @@
           1,
           null,
           1,
-          2,
-          2,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -459,6 +465,29 @@
           1,
           1,
           null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
           null,
           null
         ]
@@ -557,8 +586,34 @@
           null,
           null
         ]
+      },
+      "/Users/sunnymoore/turing/3mod/projects/bandaid-2205-fe/app/services/artist_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1663685346
+    "timestamp": 1663691279
   }
 }
