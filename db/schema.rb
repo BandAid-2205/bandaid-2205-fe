@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2022_09_16_154100) do
     t.string "uid"
     t.string "email"
     t.string "token"
-    t.integer "role"
+    t.integer "role", default: 0
   end
 
 end

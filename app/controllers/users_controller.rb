@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def show
-
+    user = current_user
   end
  
   def create
@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     user = User.find_or_create_by(email: auth_hash[:info][:email], uid: auth_hash[:uid], token: auth_hash[:credentials][:token])
     session[:access_token] = auth_hash[:credentials][:token]
     session[:user_id] = user.id
-    # binding.pry
     redirect_to '/roles'
   end
 

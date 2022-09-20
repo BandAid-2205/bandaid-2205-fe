@@ -3,5 +3,5 @@ class User < ApplicationRecord
    validates :email, presence: true
    validates :token, presence: true
 
-   enum role: %w(artist venue)
+   enum role: %w(default artist venue)
 end
