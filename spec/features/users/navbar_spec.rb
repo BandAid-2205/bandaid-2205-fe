@@ -7,10 +7,5 @@ RSpec.describe 'Nav Bar' do
     expect(page).to have_link('Home')
     click_on 'Home'
     expect(current_path).to eq(root_path)
-
-    visit events_path
-    expect(page).to have_link('Home')
-    click_on 'Home'
-    expect(current_path).to eq(root_path)
   end
 end
