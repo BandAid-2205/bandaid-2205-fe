@@ -1,17 +1,20 @@
 class ArtistsController < ApplicationController
-  def index; end
+  def index
+    
+  end
 
   def new
-    user = current_user
+    data= { name: '', location: '', genre: '', bio: '' }
+    @imported = Artist.new(data)
   end
 
-  def create
-    #API POST REQUEST
-  end
-
-  private
-
-  def artist_params
-    params.require(:name, :location, :bio, :genre, :image_path)
+  def import
+    if params[:name] == nil
+      flash[:error] = "Name cannot be blank"
+      redirect_to '/artists/register'
+    else
+      @imported = ArtistFacade.artist_import(params[:name])
+      render action: :new
+    end
   end
 end

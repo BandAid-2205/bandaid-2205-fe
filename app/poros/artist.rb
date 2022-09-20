@@ -1,8 +1,12 @@
 class Artist
-  attr_reader :name, :city
+  attr_reader :name, :location, :genre, :bio, :image_path
   
   def initialize(data)
     @name = data[:name]
-    @city = data[:city]
+    @location = data[:location]
+    @phone = data[:phone]
+    @genre = data[:genre]
+    @bio = data[:bio]
+    @image_path = data[:image_path]
   end
 end

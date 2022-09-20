@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bandaid-be.herokuapp.com/api/v1/artists/1000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 20 Sep 2022 16:22:21 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cfdf8461345eeaacecc9db4630a088b8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 71b1660b-5bb7-44ff-bc19-1c014ef7bc98
+      X-Runtime:
+      - '0.029883'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"artist","attributes":{"name":"Annie Lennox","location":"6678
+        Bernard Station, East Santinaside, CO 68545","bio":"Qui autem corrupti. Corporis
+        labore velit. Quia consequuntur quia.","genre":"Rock","image_path":"https://via.placeholder.com/300x300.png","user_id":1000}}}'
+  recorded_at: Tue, 20 Sep 2022 16:22:21 GMT
+recorded_with: VCR 6.1.0

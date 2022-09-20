@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bandaid-be.herokuapp.com/api/v1/lastfm/search?query=Annie%20Lennox
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 20 Sep 2022 16:02:05 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b3b30e4835272ef29974be27e8b457f8"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a9142f3d-15f6-405d-a922-be9416db71df
+      X-Runtime:
+      - '0.096642'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"artist_poro","attributes":{"name":"Annie
+        Lennox","bio":"Annie Lennox is an Oscar, Brit and Grammy award-winning pop
+        musician and vocalist. She was born on December 25, 1954 in Aberdeen, Scotland.\n\nAfter
+        three years as lead singer of The Tourists, Lennox achieved her most notable
+        fame as the alto, soul-tinged lead singer of the 1980s rock duo Eurythmics
+        with British musician Dave Stewart. Early in the Eurythmics'' career, she
+        was known for her androgyny, wearing suits and once impersonating Elvis. Journalists
+        often referred to her as \"the white Grace Jones\". \u003ca href=\"https://www.last.fm/music/Annie+Lennox\"\u003eRead
+        more on Last.fm\u003c/a\u003e","genre":"female vocalists","image_path":"https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png"}}}'
+  recorded_at: Tue, 20 Sep 2022 16:02:05 GMT
+recorded_with: VCR 6.1.0
