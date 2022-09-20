@@ -10,16 +10,18 @@
   </head>
 
   <body>
-    <div class="container-fluid" id="navbar-container">
-      <nav class="nav">
-        <a class="nav-link" href="/">Home</a>
-      </nav>
-    </div>
-    <% flash.each do |type, msg| %>
+   <% flash.each do |type, msg| %>
       <div class="flash-notice">
         <%= msg %>
       </div>
     <% end %>
+  <nav class="site-header sticky-top py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block text-white" href="/">Home</a>
+      <a class="py-2 d-none d-md-inline-block text-white" href="#">Dashboard</a>
+      <a class="py-2 d-none d-md-inline-block text-white" href="#">Logout</a>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

@@ -13,7 +13,6 @@ class ArtistsController < ApplicationController
       flash[:error] = "Name cannot be blank"
       redirect_to '/artists/register'
     else
-      # binding.pry
       @imported = ArtistFacade.artist_import(params[:name])
       render action: :new
     end

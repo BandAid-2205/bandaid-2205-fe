@@ -21,6 +21,7 @@ RSpec.describe 'OAuth Login with Google' do
 
       expect(current_path).to eq('/roles')
       expect(User.last.email).to eq('me@me.com')
+      expect(User.last.name).to eq('Bono')
     end
   end
 end
