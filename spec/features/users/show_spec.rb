@@ -21,7 +21,7 @@ RSpec.describe 'Roles Page' do
     expect(current_path).to eq('/artists/register')
   end
   it "has a link 'I am a venue/booker' which takes me to venue/registration" do
-    click_on 'I am a venue/booker'
+    click_on 'I am a venue'
     expect(current_path).to eq('/venues/register')
   end
 end

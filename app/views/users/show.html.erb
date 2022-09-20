@@ -2,8 +2,8 @@
   <div class="col-md-5 p-lg-5 mx-auto my-5">
     <h1 class="display-3 font-weight-normal">BandAid</h1>
       <div class ='btn-group' role='group'>
-        <%= button_to 'I am an artist', '/roles', class: 'btn btn-warning btn-lg active my-5 mx-3 text-white', params: { role: 1 } %>
-        <%= button_to 'I am a venue', '/roles', class: 'btn btn-danger btn-lg active my-5 mx-3', params: { role: 2 } %>
+        <%= button_to 'I am an artist', '/roles', class: 'btn btn-warning btn-lg active my-5 mx-3 text-white', params: { role: 'artist' } %>
+        <%= button_to 'I am a venue/booker', '/roles', class: 'btn btn-danger btn-lg active my-5 mx-3', params: { role: 'venue' } %>
       </div>
   </div>
 </div>
