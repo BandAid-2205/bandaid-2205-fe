@@ -5,5 +5,6 @@ class VenuesController < ApplicationController
   end
 
   def show
+    @venue = #venuefacade method that 
   end
 end

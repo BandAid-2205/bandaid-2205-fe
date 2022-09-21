@@ -1,7 +1,7 @@
 class VenueService
 
-  def self.venue_details(params)
-    response = conn.get("/api/v1/venues/#{params[:id]}")
+  def self.venue_details(user_id)
+    response = conn.get("/api/v1/venues/#{user_id}")
     status_check(response)
   end
 
@@ -10,7 +10,7 @@ class VenueService
   end
   
   private
-  def self.conn
-    Faraday.new(url:#TBD)
+   def self.conn
+    Faraday.new(url: "https://bandaid-be.herokuapp.com")
   end
 end
