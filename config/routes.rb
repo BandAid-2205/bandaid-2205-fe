@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/artists/dashboard', to: 'artists#show'
 
   get '/venues/register', to: 'venues#new'
+  post '/venues/register', to: 'venues#create'
   get '/venues/dashboard', to: 'venues#show'
 
   get '/auth/google_oauth2', as: :google_login
