@@ -8,17 +8,16 @@
 <% end %>
 </div>
 
-<%= form_with url: artists_register_path, method: :post, local: true do |f| %>
-   <%= f.label :name, "Name:" %>
-   <%= f.text_field :name, value: @imported.name %>
-   <%= f.label :location, "Location:" %>
-   <%= f.text_field :location, value: @imported.location %>
-   <%= f.label :phone, "Phone:" %>
-   <%= f.telephone_field :phone %>
-   <%= f.label :genre, "Genre:" %>
-   <%= f.text_field :genre, value: @imported.genre %>
-   <%= f.label :bio, "Tell me about yourself:" %>
-   <%= f.text_field :bio, value: @imported.bio %>
-   <%= f.submit "Complete Registration" %>
-   <% end %>
- 
+<div id="artist-form">
+  <%= form_with url: artists_register_path, method: :post, local: true do |f| %>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name, value: @imported.name %>
+    <%= f.label :location, "Location:" %>
+    <%= f.text_field :location, value: @imported.location %>
+    <%= f.label :genre, "Genre:" %>
+    <%= f.text_field :genre, value: @imported.genre %>
+    <%= f.label :bio, "Tell me about yourself:" %>
+    <%= f.text_field :bio, value: @imported.bio %>
+    <%= f.submit "Complete Registration" %>
+  <% end %>
+ </div>
