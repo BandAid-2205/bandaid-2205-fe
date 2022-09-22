@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/roles', to: 'user_role#update'
   
   get '/artists/register', to: 'artists#new'
+  post '/artists/register', to: 'artists#create'
   get '/artists/import', to: 'artists#import'
   get '/artists/dashboard', to: 'artists#show'
 
