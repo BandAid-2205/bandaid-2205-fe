@@ -20,8 +20,10 @@ RSpec.describe 'Artists#new' do
     
     within('#artist-form') do
       expect(page).to have_field('Name', with: 'Annie Lennox')
-      expect(page).to have_field('Genre', with: 'female vocalists') 
+      expect(page).to have_field('Genre', with: 'female vocalists')
+      expect(find_field(:bio).value.blank?).to eq(false)
     end
+    
     
 
     
