@@ -48,8 +48,8 @@ RSpec.describe 'Artists#new' do
       fill_in :genre, with: 'rock'
       fill_in :bio, with: 'music stuff'
       click_on 'Complete Registration'  
-      save_and_open_page
     end
+    save_and_open_page
     expect(page).to have_content('Registration complete!')
     expect(current_path).to eq(artist_path(session[:user_id]))
   end

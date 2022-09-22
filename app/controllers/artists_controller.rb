@@ -3,8 +3,9 @@ class ArtistsController < ApplicationController
 
   def show
     # binding.pry
-    # @artist = ArtistFacade.artist_details(params[:user_id])
+    @artist = ArtistFacade.artist_details(params[:user_id])
   end
+
   def new
     data = { name: '', location: '', genre: '', bio: '', image_path: '/assets/images/no_image_icon.png' }
     @imported = Artist.new(data)
@@ -22,8 +23,9 @@ class ArtistsController < ApplicationController
 
   def create
     response = ArtistService.artist_create(artist_params)
-    if response != nil
+    if !response.nil?
       flash[:success] = 'Registration Complete!'
+      # binding.pry
       redirect_to "/artists/#{params[:user_id]}"
     else
       flash[:error] = response
