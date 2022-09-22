@@ -2,7 +2,6 @@ class ArtistFacade
 
   def self.artist_details(user_id)
     parsed_json = ArtistService.artist_details(user_id)
-    
     Artist.new(parsed_json[:data][:attributes])
   end
   
