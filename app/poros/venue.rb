@@ -1,11 +1,11 @@
 class Venue
-  
-  attr_reader :name, :city, :state, :address, :zip_code
+  attr_reader :name, :location, :phone, :price, :category, :rating
   def initialize(data)
     @name = data[:name]
-    @city = data[:city]
-    @state = data[:state]
-    @address = data[:address1]
-    @zip_code = data[:zip_code]
+    @location = data[:location]
+    @phone = data[:phone]
+    @price = data[:price]
+    @category = data[:category]
+    @rating = data[:rating]
   end
 end
