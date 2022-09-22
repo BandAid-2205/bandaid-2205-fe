@@ -12,6 +12,12 @@ class UsersController < ApplicationController
     redirect_to '/roles'
   end
 
+  def destroy
+    session.destroy
+    redirect_to root_path
+    flash[:success] = "You've succesfully logged out."
+  end
+
 
   private
   def user_params

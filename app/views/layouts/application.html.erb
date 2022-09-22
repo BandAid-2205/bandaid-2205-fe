@@ -18,8 +18,10 @@
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block text-white" href="/">Home</a>
-      <a class="py-2 d-none d-md-inline-block text-white" href="#">Dashboard</a>
-      <a class="py-2 d-none d-md-inline-block text-white" href="#">Logout</a>
+      <% if current_user %>
+      <%= link_to 'Logout', '/logout', method: :delete, class: 'py-2 d-none d-md-inline-block text-white' %>
+      <% else %>
+      <% end %>
     </div>
   </nav>
     <%= yield %>
