@@ -1,7 +1,6 @@
 <h1>Artist Registration Page</h1>
 <div id = "artist-import">
-  <%= image_tag "341104_last.fm_icon.png", height: 48 %>
-  <%# <center><%= link_to "Import from Last.fm", artists_import_path, session[:name] => :name %></center> %>
+  <%= image_tag "341104_last.fm_icon.png", height: 48 %> 
   <%= form_with url: artists_import_path, method: :get, local: true do |f| %>
     <%= f.label :name, "Artist Name (required):" %>
     <%= f.text_field :name %>
@@ -22,3 +21,4 @@
    <%= f.text_field :bio, value: @imported.bio %>
    <%= f.submit "Complete Registration" %>
    <% end %>
+ 
