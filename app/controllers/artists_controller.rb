@@ -3,7 +3,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    data= { name: '', location: '', genre: '', bio: '' }
+    data = { name: '', location: '', genre: '', bio: '' }
     @imported = Artist.new(data)
   end
 
@@ -15,5 +15,9 @@ class ArtistsController < ApplicationController
       @imported = ArtistFacade.artist_import(params[:name])
       render action: :new
     end
+  end
+
+  def show
+    
   end
 end

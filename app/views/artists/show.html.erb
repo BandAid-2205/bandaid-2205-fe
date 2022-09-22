@@ -1,19 +1,51 @@
-<h1>Artist Dashboard</h1>
+ <input class="form-control form-control-dark w-100" type="text" placeholder="Search for venues" aria-label="Search">
+</div>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2 mr-auto">Artist Name (genre)</h1>
+    <a class="btn btn-outline-primary mx-2" href="#" role="button">Edit profile</a>
+    <a class="btn btn-outline-danger" href="#" role="button">Delete profile</a>
+  </div>
+  <img src="https://iscale.iheart.com/catalog/artist/179" width=200 length=250>
+  <h4>Location: Somewhere, ST</h4>
+  <h4>Bio: I like to play the songs and do the things.</h4><br>
+  
 
-<nav class="navbar navbar-light bg-light">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="Search for Events" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
 
+  <h2>My Venues</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Venue Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brooklyn Bowl</td>
+        </tr>
+        <tr>
+          <td>Terminal 5</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<h1><%= artist.name %></h1>
-<h3><%= artist.genre %> years old</h3>
-<h3><%= artist.location %></h3>
-<h3><%= artist.bio %></h3>
+  <br>
 
-<p><%= link_to "Update #{artist.name}", "/artists/#{artist.id}/edit" %></p>
-<p><%= link_to "Delete #{artist.name}", "/artists/#{artist.id}", method: :destroy %></p>
-
-#flexbox required to add events sections on right of screen
+  <h2>Pending Bookings</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>Venue Name</th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Madison Square Garden</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
