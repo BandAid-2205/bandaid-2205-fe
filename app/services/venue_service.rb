@@ -18,6 +18,19 @@ class VenueService
     status_check(response)
   end
 
+  def self.update_venue(user_id, venue_params)
+    response = conn.patch("/api/v1/venues/#{user_id}", {
+      name: venue_params[:name],
+      location: venue_params[:location],
+      phone: venue_params[:phone],
+      price: venue_params[:price],
+      category: venue_params[:category],
+      rating: venue_params[:rating],
+      user_id: venue_params[:user_id]
+    }.to_json, "Content-Type" => "application/json")
+    status_check(response)
+  end
+
   def self.status_check(response)
     JSON.parse(response.body, symbolize_names: true) if response.status == 200
   end

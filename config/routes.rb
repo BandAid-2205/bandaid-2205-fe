@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   get '/venues', to: 'venues#index'
   get '/venues/register', to: 'venues#new'
+  get '/venues/edit', to: 'venues#edit'
   post '/venues/register', to: 'venues#create'
+  patch '/venues/register', to: 'venues#update'
   get '/venues/dashboard', to: 'venues#show'
 
   get '/auth/google_oauth2', as: :google_login

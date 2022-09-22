@@ -14,6 +14,15 @@ class VenuesController < ApplicationController
     VenueService.new_venue(venue_params)
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    user = current_user
+    VenueService.update_venue(user.id, venue_params)
+  end
+
   private
   def venue_params
     params.permit(:name, :location, :phone, :price, :category, :rating, :user_id)
