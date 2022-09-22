@@ -1,8 +1,12 @@
 class ArtistsController < ApplicationController
   def index; end
 
+  def show
+    # binding.pry
+    # @artist = ArtistFacade.artist_details(params[:user_id])
+  end
   def new
-    data = { name: '', location: '', genre: '', bio: '' }
+    data = { name: '', location: '', genre: '', bio: '', image_path: '/assets/images/no_image_icon.png' }
     @imported = Artist.new(data)
   end
 
@@ -17,6 +21,18 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    
+    response = ArtistService.artist_create(artist_params)
+    if response != nil
+      flash[:success] = 'Registration Complete!'
+      redirect_to "/artists/#{params[:user_id]}"
+    else
+      flash[:error] = response
+    end
+  end
+
+  private
+
+  def artist_params
+    params.permit(:user_id, :name, :location, :genre, :bio, :image_path)
   end
 end

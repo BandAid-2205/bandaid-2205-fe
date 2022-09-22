@@ -18,6 +18,8 @@
     <%= f.text_field :genre, value: @imported.genre %>
     <%= f.label :bio, "Tell me about yourself:" %>
     <%= f.text_field :bio, value: @imported.bio %>
+    <%= f.hidden_field :image_path, value: @imported.image_path%>
+    <%= f.hidden_field :user_id, value: session[:user_id] %>
     <%= f.submit "Complete Registration" %>
   <% end %>
  </div>
