@@ -1,14 +1,14 @@
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2 mr-auto">Venue Name (category)</h1>
+    <h1 class="h2 mr-auto"><%= @venue.name %><%= "(#{@venue.category})" %></h1>
     <a class="btn btn-outline-primary mx-2" href="#" role="button">Edit profile</a>
     <a class="btn btn-outline-danger" href="#" role="button">Delete profile</a>
   </div>
   
-  <h4>123 Main St<br>Somewhere, ST 12345</h4>
-  <h4>(212) 867-5309 </h4><br>
-  <h4>Price: $$$</h4>
-  <h4>Yelp Rating: 4.5</h4><br>
+  <h4>Address:<%= @venue.location %></h4>
+  <h4>Phone:<%= @venue.phone %> </h4><br>
+  <h4>Price: <%= @venue.price %></h4>
+  <h4>Yelp Rating: <%= @venue.rating %></h4><br>
   
 
 
@@ -18,18 +18,17 @@
       <thead>
         <tr>
           <th>Artist Name</th>
-          <th>Phone Number</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>ThunderCat</td>
-          <td>718-718-7189</td>
-        </tr>
-        <tr>
-          <td>Creedence Clearwater Revival</td>
-          <td>356-456-7898</td>
-        </tr>
+        <% @venue.bookings.each do |artist| %>
+          <% if artist[:booking_status] == 1 %>
+          <tr>
+            <td><%= link_to "#{artist[:artist_name]}", "/artist/dashboard" %></td>
+          </tr>
+          <% else %>
+          <% end %>
+        <% end %>
       </tbody>
     </table>
   </div>
@@ -42,21 +41,21 @@
       <thead>
         <tr>
           <th>Artist Name</th>
-          <th>Phone Number</th>
-          <th>Genre</th>
+          <th>Approve?</th>
+          <th>Deny?</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Bee Gees</td>
-          <td>718-718-7189</td>
-          <td>Classic Rock</td>
-        </tr>
-        <tr>
-          <td>Jo Schmo</td>
-          <td>356-456-7898</td>
-          <td>Swing</td>
-        </tr>
+        <% @venue.bookings.each do |artist| %>
+          <% if artist[:booking_status] == 0 %>
+          <tr>
+            <td><%= link_to "#{artist[:artist_name]}", "/artists/dashboard" %></td>
+            <td><%= button_to "Approve", "/venues/dashboard", method: :patch, params: {booking_status: 1}, class: 'btn btn-outline-primary' %>
+            <td><%= button_to "Deny", "/venues/dashboard", method: :patch, params: {booking_status: 2}, class: 'btn btn-outline-primary' %>
+          </tr>
+          <% else %>
+          <% end %>
+        <% end %>
       </tbody>
     </table>
   </div>

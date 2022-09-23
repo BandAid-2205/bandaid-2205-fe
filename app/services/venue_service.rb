@@ -14,7 +14,7 @@ class VenueService
       category: venue_params[:category],
       rating: venue_params[:rating],
       user_id: venue_params[:user_id]
-    }.to_json, "Content-Type" => "application/json")  
+    }.to_json, "Content-Type" => "application/json")   
     status_check(response)
   end
 
@@ -32,7 +32,7 @@ class VenueService
   end
 
   def self.status_check(response)
-    JSON.parse(response.body, symbolize_names: true) if response.status == 200
+    JSON.parse(response.body, symbolize_names: true) 
   end
   
   private

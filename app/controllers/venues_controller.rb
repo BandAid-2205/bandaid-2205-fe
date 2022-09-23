@@ -12,6 +12,7 @@ class VenuesController < ApplicationController
 
   def create
     VenueService.new_venue(venue_params)
+    redirect_to '/venues/dashboard'
   end
 
   def edit
@@ -21,6 +22,7 @@ class VenuesController < ApplicationController
   def update
     user = current_user
     VenueService.update_venue(user.id, venue_params)
+    redirect_to '/venues/dashboard'
   end
 
   private

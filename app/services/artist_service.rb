@@ -15,7 +15,6 @@ class ArtistService
   end
 
   private 
-
   def self.conn
     Faraday.new(url: "https://bandaid-be.herokuapp.com")
   end
