@@ -2,6 +2,12 @@ class UsersController < ApplicationController
 
   def show
     user = current_user
+    if user.role == 'venue'
+      redirect_to '/venues/dashboard'
+    elsif user.role == 'artist'
+      redirect_to '/artists/dashboard'
+    else
+    end
   end
  
   def create
