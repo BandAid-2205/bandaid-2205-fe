@@ -5,6 +5,7 @@
     <h1 class="h2 mr-auto"><%= @artist.name%>( <%= @artist.genre %>)</h1>
     <a class="btn btn-outline-primary mx-2" href="#" role="button">Edit profile</a>
     <a class="btn btn-outline-danger" href="#" role="button">Delete profile</a>
+    <%= button_to 'Delete Profile', '/artists/dashboard', method: :delete, class: 'btn btn-outline-danger' %>
   </div>
   <img src="https://iscale.iheart.com/catalog/artist/179" width=200 length=250>
   <h4>Location: <%= @artist.location %></h4>
