@@ -2,7 +2,6 @@ class ArtistsController < ApplicationController
   def index; end
 
   def show
-    # binding.pry
     @artist = ArtistFacade.artist_details(params[:id])
   end
 
@@ -25,7 +24,6 @@ class ArtistsController < ApplicationController
     response = ArtistService.artist_create(artist_params)
     if !response.nil?
       flash[:success] = 'Registration Complete!'
-      # binding.pry
       redirect_to artist_path(params[:user_id])
     else
       flash[:error] = response

@@ -17,8 +17,11 @@ class ArtistService
       genre: artist_params[:genre],
       bio: artist_params[:bio],
       image_path: artist_params[:image_path],
-      user_id: artist_params[:user_id]
-    }.to_json, "Content-Type" => "application/json") 
+      user_id: artist_params[:user_id],
+      bookings: artist_params[:bookings],
+      artists: artist_params[:artists],
+      venue_artists: artist_params[:venue_artists]
+    }.to_json, "Content-Type" => "application/json")
     status_check(response)
   end
 
@@ -26,7 +29,7 @@ class ArtistService
     JSON.parse(response.body, symbolize_names: true) if response.status == 200
   end
 
-  private 
+  private
 
   def self.conn
     Faraday.new(url: "https://bandaid-be.herokuapp.com")
