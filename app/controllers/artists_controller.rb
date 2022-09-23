@@ -30,6 +30,9 @@ class ArtistsController < ApplicationController
     end
   end
 
+  def delete
+    response = ArtistService.artist_delete(params[:id])
+  end
   private
 
   def artist_params

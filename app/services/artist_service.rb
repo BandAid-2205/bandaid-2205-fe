@@ -25,6 +25,11 @@ class ArtistService
     status_check(response)
   end
 
+  def self.artist_delete(artist_id)
+    #returns 204 no content if successful
+    response = conn.delete("/api/v1/artists/#{artist_id}")
+  end
+
   def self.status_check(response)
     JSON.parse(response.body, symbolize_names: true) if response.status == 200
   end
