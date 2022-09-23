@@ -58,4 +58,23 @@ RSpec.describe 'Artist Service' do
     expect(parsed[:venues]).to eq []
     expect(parsed[:venue_artists]).to eq []
   end
+  
+  xit 'artist_update method updates an artists profile, updates be db, and returns hash', :vcr do
+    data = { user_id: 1000002, name: 'Some Band', location:'PDXOR', genre: 'funk', bio: 'my bio'}
+    new_data = {user_id: 1000002, name: 'Some Band', location:'LAX', genre: 'funk', bio: 'I play funk'}
+    # binding.pry 
+    response = ArtistService.artist_update(user.id, )    
+    parsed = response[:data][:attributes]
+
+    expect(parsed).to be_a Hash
+    expect(parsed[:user_id]).to eq(1000002)
+    expect(parsed[:name]).to eq('Some Band')
+    expect(parsed[:location]).to eq('LAX')
+    expect(parsed[:genre]).to eq('funk')
+    expect(parsed[:bio]).to eq('I play funk')
+    expect(parsed[:image_path]).to eq(nil)
+    expect(parsed[:bookings]).to eq([])
+    expect(parsed[:venues]).to eq([])
+    expect(parsed[:venue_artists]).to eq([])
+  end
 end

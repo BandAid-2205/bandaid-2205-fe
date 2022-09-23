@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/artists/register', to: 'artists#new'
   post '/artists/register', to: 'artists#create'
   get '/artists/import', to: 'artists#import'
+  patch '/artists/register', to: 'artists#update'
   get '/artists/dashboard', to: 'artists#show'
 
   get '/venues', to: 'venues#index'
