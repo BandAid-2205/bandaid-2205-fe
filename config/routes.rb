@@ -5,10 +5,14 @@ Rails.application.routes.draw do
   get '/roles', to: 'users#show'
   post '/roles', to: 'user_role#update'
 
+  # resources :artists, only: [:show]
+
   get '/artists/register', to: 'artists#new'
   post '/artists/register', to: 'artists#create'
   get '/artists/import', to: 'artists#import'
+  patch '/artists/register', to: 'artists#update'
   get '/artists/dashboard', to: 'artists#show'
+  delete '/artists/:id', to: 'artists#delete'
 
   get '/venues', to: 'venues#index'
   get '/venues/register', to: 'venues#new'
