@@ -2,6 +2,7 @@ class ArtistsController < ApplicationController
   def index; end
 
   def show
+    require 'pry'; binding.pry 
     @artist = ArtistFacade.artist_details(params[:id])
   end
 
@@ -36,6 +37,9 @@ class ArtistsController < ApplicationController
     redirect_to '/artists/dashboard'
   end
 
+  def delete
+    response = ArtistService.artist_delete(params[:id])
+  end
   private
 
   def artist_params
