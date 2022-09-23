@@ -1,10 +1,11 @@
 class Venue
-  attr_reader :name,
-              :location,
-              :phone,
-              :price,
-              :category,
-              :rating,
+
+  attr_reader :name, 
+              :location, 
+              :phone, 
+              :price, 
+              :category, 
+              :rating, 
               :user_id,
               :bookings,
               :artists,

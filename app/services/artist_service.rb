@@ -29,7 +29,7 @@ class ArtistService
     JSON.parse(response.body, symbolize_names: true) if response.status == 200
   end
 
-  private
+  private 
 
   def self.conn
     Faraday.new(url: "https://bandaid-be.herokuapp.com")
