@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bandaid-be.herokuapp.com/api/v1/artists
+    body:
+      encoding: UTF-8
+      string: '{"name":"Some Band","location":"PDXOR","genre":"funk","bio":"my bio","image_path":null,"user_id":1000002}'
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Thu, 22 Sep 2022 18:23:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"22281a9966ba3814ce9915c1d709fde4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 38d76b69-dbe3-41d7-a049-614ebf70f355
+      X-Runtime:
+      - '0.010605'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"14","type":"artist","attributes":{"name":"Some Band","location":"PDXOR","bio":"my
+        bio","genre":"funk","image_path":null,"user_id":1000002,"bookings":[],"venues":[],"venue_artists":[]},"relationships":{}},"included":[]}'
+  recorded_at: Thu, 22 Sep 2022 18:23:41 GMT
+recorded_with: VCR 6.1.0

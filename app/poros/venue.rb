@@ -1,4 +1,5 @@
 class Venue
+
   attr_reader :name, 
               :location, 
               :phone, 
