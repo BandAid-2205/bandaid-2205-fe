@@ -31,6 +31,7 @@ class ArtistsController < ApplicationController
   end
 
   def delete
+    binding.pry
     response = ArtistService.artist_delete(params[:id])
   end
   private
