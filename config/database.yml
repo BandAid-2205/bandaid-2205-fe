@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: bandaid-2205-be_development
+  database: bandaid-2205-fe_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: bandaid-2205-be_test
+  database: bandaid-2205-fe_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: bandaid-2205-be_production
-  username: bandaid-2205-be
-  password: <%= ENV['BANDAID-2205-BE_DATABASE_PASSWORD'] %>
+  database: bandaid-2205-fe_production
+  username: bandaid-2205-fe
+  password: <%= ENV['BANDAID-2205-FE_DATABASE_PASSWORD'] %>
