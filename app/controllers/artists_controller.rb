@@ -2,7 +2,6 @@ class ArtistsController < ApplicationController
   def index; end
 
   def show
-    require 'pry'; binding.pry 
     @artist = ArtistFacade.artist_details(params[:id])
   end
 
