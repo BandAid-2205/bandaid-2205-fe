@@ -1,25 +1,26 @@
-<h1>Artist Registration Page</h1>
-<div id = "artist-import">
+<center><h1>Artist Registration Page</h1></center>
+<b><b>
+<center><div id = "artist-import">
   <%= image_tag "341104_last.fm_icon.png", height: 48 %> 
   <%= form_with url: artists_import_path, method: :get, local: true do |f| %>
     <%= f.label :name, "Artist Name (required):" %>
     <%= f.text_field :name %>
     <%= f.submit "Import from Last.fm" %>
 <% end %>
-</div>
-
-<div id="artist-form">
+</div></center>
+<b><b>
+<center><div id="artist-form">
   <%= form_with url: artists_register_path, method: :post, local: true do |f| %>
     <%= f.label :name, "Name:" %>
-    <%= f.text_field :name, value: @imported.name %>
+    <%= f.text_field :name, value: @imported.name %><b><b>
     <%= f.label :location, "Location:" %>
-    <%= f.text_field :location, value: @imported.location %>
+    <%= f.text_field :location, value: @imported.location %><b><b>
     <%= f.label :genre, "Genre:" %>
-    <%= f.text_field :genre, value: @imported.genre %>
+    <%= f.text_field :genre, value: @imported.genre %><b><b>
     <%= f.label :bio, "Tell me about yourself:" %>
-    <%= f.text_field :bio, value: @imported.bio %>
+    <%= f.text_field :bio, value: @imported.bio %><b><b>
     <%= f.hidden_field :image_path, value: @imported.image_path%>
     <%= f.hidden_field :user_id, value: session[:user_id] %>
-    <%= f.submit "Complete Registration" %>
+    <%= f.submit "Complete Registration" %><b><b>
   <% end %>
- </div>
+ </div></center>
