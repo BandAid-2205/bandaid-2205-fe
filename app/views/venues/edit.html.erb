@@ -1,0 +1,23 @@
+<h1>Edit Venue</h1>
+<%= form_with url: '/venues/edit', method: :patch, local: true do |f| %>
+
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name, value: @venue.name %>
+
+  <%= f.label :location, "Location:" %>
+  <%= f.text_field :location, value: @venue.location %>
+
+  <%= f.label :phone, "Phone:" %>
+  <%= f.telephone_field :phone, value: @venue.phone %>
+
+  <%= f.label :category, "Category:" %>
+  <%= f.text_field :category, value: @venue.category %>
+  
+  <%= f.label :price, "Price:" %>
+  <%= f.select :price, ['$', '$$', '$$$', '$$$$'], value: @venue.price %>
+  
+  <%= f.hidden_field :rating, value: nil %>
+  <%= f.hidden_field :user_id, value: @user.id %>
+
+  <%= f.submit %>
+<% end %>

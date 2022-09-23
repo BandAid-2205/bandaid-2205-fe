@@ -34,6 +34,10 @@ class VenueService
     status_check(response)
   end
 
+  def self.delete_venue(user_id)
+    response = conn.delete("/api/v1/venues/#{user_id}")
+  end
+
   def self.status_check(response)
     JSON.parse(response.body, symbolize_names: true) 
   end
