@@ -2,13 +2,13 @@
 </div>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2 mr-auto">Artist Name (genre)</h1>
+    <h1 class="h2 mr-auto"><%= @artist.name%>( <%= @artist.genre %>)</h1>
     <a class="btn btn-outline-primary mx-2" href="#" role="button">Edit profile</a>
     <a class="btn btn-outline-danger" href="#" role="button">Delete profile</a>
   </div>
   <img src="https://iscale.iheart.com/catalog/artist/179" width=200 length=250>
-  <h4>Location: Somewhere, ST</h4>
-  <h4>Bio: I like to play the songs and do the things.</h4><br>
+  <h4>Location: <%= @artist.location %></h4>
+  <h4>Bio: <%= @artist.bio %></h4><br>
   
 
 
