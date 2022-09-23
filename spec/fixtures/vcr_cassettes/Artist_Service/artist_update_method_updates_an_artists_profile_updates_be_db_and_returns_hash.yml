@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://bandaid-be.herokuapp.com/api/v1/artists
+    body:
+      encoding: UTF-8
+      string: '{"name":"Some Band","location":"LAX","genre":"funk","bio":"I play funk","image_path":null,"user_id":1000002,"bookings":null,"artists":null,"venue_artists":null}'
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 23 Sep 2022 16:41:42 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - bdc58631-d950-4a93-923e-1b1b98cd88a5
+      X-Runtime:
+      - '0.001047'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 23 Sep 2022 16:41:43 GMT
+- request:
+    method: post
+    uri: https://bandaid-be.herokuapp.com/api/v1/artists
+    body:
+      encoding: UTF-8
+      string: '{"name":"Some Band","location":"PDXOR","genre":"funk","bio":"my bio","image_path":null,"user_id":1000002,"bookings":null,"artists":null,"venue_artists":null}'
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 23 Sep 2022 19:55:19 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d925a3ed3d31510a213137827462a176"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9e868788-1221-4785-b8ba-55f89efdc088
+      X-Runtime:
+      - '0.009469'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"186","type":"artist","attributes":{"name":"Some Band","location":"PDXOR","bio":"my
+        bio","genre":"funk","image_path":null,"user_id":1000002,"bookings":[],"venues":[],"venue_artists":[]},"relationships":{}},"included":[]}'
+  recorded_at: Fri, 23 Sep 2022 19:55:19 GMT
+- request:
+    method: patch
+    uri: https://bandaid-be.herokuapp.com/api/v1/artists/1000002
+    body:
+      encoding: UTF-8
+      string: '{"name":"Some Band","location":"LAX","genre":"funk","bio":"I play funk","image_path":null,"user_id":1000002,"bookings":null,"artists":null,"venue_artists":null}'
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 23 Sep 2022 20:03:49 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"dda89015dfd74eb95e3088ad37df0dc6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1f85573a-c1de-4b54-92b7-bc7df0c9d25b
+      X-Runtime:
+      - '0.009414'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"167","type":"artist","attributes":{"name":"Some Band","location":"LAX","bio":"I
+        play funk","genre":"funk","image_path":null,"user_id":1000002,"bookings":[],"venues":[],"venue_artists":[]},"relationships":{}},"included":[]}'
+  recorded_at: Fri, 23 Sep 2022 20:03:49 GMT
+recorded_with: VCR 6.1.0

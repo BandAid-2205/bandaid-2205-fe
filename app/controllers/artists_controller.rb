@@ -30,6 +30,16 @@ class ArtistsController < ApplicationController
     end
   end
 
+  def update
+    user = current_user
+    ArtistService.artist_update(user.id, artist_params)
+    redirect_to '/artists/dashboard'
+  end
+
+  def delete
+    binding.pry
+    response = ArtistService.artist_delete(params[:id])
+  end
   private
 
   def artist_params

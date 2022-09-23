@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://bandaid-be.herokuapp.com/api/v1/artists
+    body:
+      encoding: UTF-8
+      string: '{"name":"Some Band","location":"LAX","genre":"funk","bio":"I play funk","image_path":null,"user_id":1000002,"bookings":null,"artists":null,"venue_artists":null}'
+    headers:
+      User-Agent:
+      - Faraday v2.5.2
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 23 Sep 2022 16:30:43 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      X-Request-Id:
+      - c8fbe4f3-d861-48de-8717-c98998c60695
+      X-Runtime:
+      - '0.000949'
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Fri, 23 Sep 2022 16:30:43 GMT
+recorded_with: VCR 6.1.0

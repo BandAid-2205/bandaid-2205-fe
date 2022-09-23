@@ -58,4 +58,37 @@ RSpec.describe 'Artist Service' do
     expect(parsed[:venues]).to eq []
     expect(parsed[:venue_artists]).to eq []
   end
+  
+  it 'artist_update method updates an artists profile, updates be db, and returns hash', :vcr do
+    data = { user_id: 1000002, name: 'Some Band', location:'PDXOR', genre: 'funk', bio: 'my bio'}
+    response = ArtistService.artist_create(data)
+
+    new_data = {user_id: 1000002, name: 'Some Band', location:'LAX', genre: 'funk', bio: 'I play funk'}
+    new_response = ArtistService.artist_update(1000002, new_data)    
+
+    parsed = new_response[:data][:attributes]
+
+    expect(parsed).to be_a Hash
+    expect(parsed[:user_id]).to eq(1000002)
+    expect(parsed[:name]).to eq('Some Band')
+    expect(parsed[:location]).to eq('LAX')
+    expect(parsed[:genre]).to eq('funk')
+    expect(parsed[:bio]).to eq('I play funk')
+    expect(parsed[:image_path]).to eq(nil)
+    expect(parsed[:bookings]).to eq([])
+    expect(parsed[:venues]).to eq([])
+    expect(parsed[:venue_artists]).to eq([])
+  end
+  
+  it 'artist_delete method deletes a user and returns 204 no content' do
+    data = { user_id: 1000002, name: 'Some Band', location:'PDXOR', genre: 'funk', bio: 'my bio'}
+    response1 = ArtistService.artist_create(data)
+ 
+    new_artist = ArtistFacade.artist_details(1000002)
+    expect(new_artist.name).to eq('Some Band')
+    
+    response2 = ArtistService.artist_delete(1000002)
+    expect(response2.status).to eq(204)
+    expect(response2.reason_phrase).to eq('No Content')
+  end
 end

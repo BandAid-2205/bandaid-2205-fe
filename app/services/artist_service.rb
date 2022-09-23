@@ -25,6 +25,26 @@ class ArtistService
     status_check(response)
   end
 
+  def self.artist_update(user_id, artist_params)
+    response = conn.patch("/api/v1/artists/#{user_id}", {
+      name: artist_params[:name],
+      location: artist_params[:location],
+      genre: artist_params[:genre],
+      bio: artist_params[:bio],
+      image_path: artist_params[:image_path],
+      user_id: artist_params[:user_id],
+      bookings: artist_params[:bookings],
+      artists: artist_params[:artists],
+      venue_artists: artist_params[:venue_artists]
+    }.to_json, "Content-Type" => "application/json")
+    status_check(response)
+  end
+
+  def self.artist_delete(artist_id)
+    #returns 204 no content if successful
+    response = conn.delete("/api/v1/artists/#{artist_id}")
+  end
+
   def self.status_check(response)
     JSON.parse(response.body, symbolize_names: true) if response.status == 200
   end
