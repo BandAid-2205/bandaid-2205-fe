@@ -3,7 +3,7 @@ class VenuesController < ApplicationController
 
   def show
     user = current_user
-    @venue = VenueFacade.find_venue(user.id)
+    @venue = VenueFacade.find_venue(user.user_id)
   end
 
   def new
