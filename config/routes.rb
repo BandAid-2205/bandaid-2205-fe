@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   patch '/venues/edit', to: 'venues#update'
   get '/venues/dashboard', to: 'venues#show'
   patch '/venues/dashboard', to: 'venue_artists#update'
-  
+  delete '/venues/dashboard', to: 'venues#destroy'
+
   get '/auth/google_oauth2', as: :google_login
   get '/auth/google_oauth2/callback', to: 'users#create'
   delete '/logout', to: 'users#destroy'
