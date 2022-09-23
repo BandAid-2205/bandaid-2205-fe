@@ -2,20 +2,18 @@ require 'rails_helper'
 
 RSpec.describe Venue do
   it 'exists' do
-    data =  {"city": "San Francisco",
-        "country": "US",
-        "address2": "",
-        "address3": "",
-        "state": "CA",
-        "address1": "375 Valencia St",
-        "zip_code": "94103",
-        "name": "Four Barrel Coffee"}
+    data =  {
+        name: "Four Barrel Coffee",
+        location: '375 Valencia St  San Francisco, CA 94103',
+        phone: "(415) 896-4289",
+        price: "$$",
+        category: "Coffee&Tea",
+        rating: "4",
 
-    expect(Venue.new(data).city).to eq('San Francisco')
-    expect(Venue.new(data).state).to eq('CA')
-    expect(Venue.new(data).address).to eq('375 Valencia St')
-    expect(Venue.new(data).zip_code).to eq('94103')
-    expect(Venue.new(data).name).to eq('Four Barrel Coffee')
+      }
+
+    venue = Venue.new(data)
+    expect(venue.name).to eq('Four Barrel Coffee')
+    expect(venue.location).to eq('375 Valencia St  San Francisco, CA 94103')
   end
-  
 end

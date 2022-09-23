@@ -9,7 +9,7 @@ RSpec.describe 'Venue Service' do
                         price: '$$',
                         category: 'Jazz&Blues',
                         rating: 4,
-                        user_id: 10505
+                        user_id: 10910
                       })
 
     response = VenueService.new_venue(venue_params)
@@ -29,7 +29,7 @@ RSpec.describe 'Venue Service' do
     expect(parsed).to have_key(:rating)
     expect(parsed[:rating]).to eq(4)
     expect(parsed).to have_key(:user_id)
-    expect(parsed[:user_id]).to eq(10505)
+    expect(parsed[:user_id]).to eq(10910)
     expect(parsed[:bookings]).to eq []
     expect(parsed[:venues]).to eq nil
     expect(parsed[:venue_artists]).to eq []
